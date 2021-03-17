@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-target_url = 'https://kakuyomu.jp/user_events/16816452218925948002?page='
+target_url = 'https://kakuyomu.jp/user_events/16816452218925948002'
 delim = "\t"
 
 header = ["Title","Author","URL","Genre","Status","Episodes","Characters"]
@@ -10,7 +10,7 @@ print(delim.join(header))
 noMoreContent = False
 idx = 1
 while(noMoreContent == False):
-    r = requests.get(target_url + str(idx))
+    r = requests.get(target_url + "?page=" + str(idx))
     soup = BeautifulSoup(r.text, 'lxml')
     if(soup.find("div", attrs={"class":"widget-emptyMessage"})):
         exit()
