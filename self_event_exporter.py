@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-target_url = 'https://kakuyomu.jp/user_events/16816452218925948002'
+target_url = 'https://kakuyomu.jp/user_events/16816452219415195483'
 delim = "\t"
 
 header = ["Title","Author","URL","Genre","Status","Episodes","Characters"]
@@ -28,6 +28,7 @@ while(noMoreContent == False):
         cols.append(card.find("span", attrs={"class": "widget-workCard-statusLabel"}).text) # Status
         cols.append(card.find("span", attrs={"class": "widget-workCard-episodeCount"}).text.replace("話","")) # Number of episodes
         cols.append(card.find("span", attrs={"class": "widget-workCard-characterCount"}).text.replace('文字',"").replace(',', "")) # Number of characters
+        cols.append(card.find("a", attrs={"class": "widget-workCard-reviewPoints"}).text.replace("★", "")) # review
 
         print(delim.join(cols))
     idx += 1
