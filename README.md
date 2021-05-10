@@ -17,7 +17,6 @@ This is a tool to scrap Kakuyomu's self event page and export to TSV (Tab separa
 Then you will see the result like as below:
 
 ```
-Title	Author	URL	Genre	Status	Episodes	Characters
-海の王と風の娘	橘 紀里	https://kakuyomu.jp/works/1177354054917676869	恋愛	完結済	45	200159
+Title	Author	URL	Genre	Status	Episodes	Characters Rating
+海の王と風の娘	橘 紀里	https://kakuyomu.jp/works/1177354054917676869	恋愛	完結済	45	200159 108
 ```
-

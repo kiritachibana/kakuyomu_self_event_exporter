@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 target_url = 'https://kakuyomu.jp/user_events/16816452219415195483'
 delim = "\t"
 
-header = ["Title","Author","URL","Genre","Status","Episodes","Characters"]
+header = ["Title","Author","URL","Genre","Status","Episodes","Characters","Rating"]
 print(delim.join(header))
 
 noMoreContent = False
